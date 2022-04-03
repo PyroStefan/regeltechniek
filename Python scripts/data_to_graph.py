@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 var = pd.read_excel("C:\\Users\\stefa\\OneDrive - Anton de Kom Universiteit van Suriname\\ADEK\\Vakken\\Semester 4\\Regeltechniek 1\\practicum\\nieuwe_sensor_data_50_en_100_procent_fanspeed.xlsx", '100%', skiprows=648)
 var.columns = ['time', 'temperature']
 
+# Calculates the total time for the given fan speed
 var['time'] = var['time'].apply(lambda x: x - 1381)
 
 x = var['time']
